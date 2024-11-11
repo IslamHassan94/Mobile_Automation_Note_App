@@ -2,7 +2,7 @@ const path = require("path");
 
 exports.config = {
   runner: "local",
-  specs: ["./tests/specs/android/delete*.js"],
+  specs: ["./tests/specs/android/delete-note-screen*.js"],
   exclude: [
     // 'path/to/excluded/files'
   ],
