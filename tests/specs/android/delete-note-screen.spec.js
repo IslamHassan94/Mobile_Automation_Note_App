@@ -9,6 +9,15 @@ describe("Delete Note", () => {
     );
     await EditNoteScreen.goBack();
   });
+  beforeEach(() => {
+    console.log("BEFORE EACH HOOK");
+  });
+  after(() => {
+    console.log("AFTER Hook");
+  });
+  afterEach(() => {
+    console.log("AFTER EACH HOOK");
+  });
   it("Delete Note and check note in trash can", async () => {
     // Get text
     const note = await EditNoteScreen.noteTitle.getText();
