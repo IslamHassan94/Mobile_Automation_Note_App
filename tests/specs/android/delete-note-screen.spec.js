@@ -1,13 +1,15 @@
 import EditNoteScreen from "../../screenobjects/android/edit-note.screen";
 
 describe("Delete Note", () => {
-  it("Delete Note and check note in trash can", async () => {
+  before(async () => {
     await EditNoteScreen.skipTutorial();
     await EditNoteScreen.addAndSaveNote(
       "Fav Anime List",
       "Naruto\nOnePiece\nAOT"
     );
     await EditNoteScreen.goBack();
+  });
+  it("Delete Note and check note in trash can", async () => {
     // Get text
     const note = await EditNoteScreen.noteTitle.getText();
 
