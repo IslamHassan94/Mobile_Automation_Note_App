@@ -35,6 +35,7 @@ class AddNoteScreen {
   }
   async saveNote() {
     await driver.back();
+    await driver.back();
   }
 }
 
