@@ -1,8 +1,9 @@
 const { config } = require("./wdio.shared.conf");
+require('dotenv').config();
 
 // BrowserStack credentials
-config.user = process.env.BROWSERSTACK_USER || "islamhassan_6EQZzX";
-config.key = process.env.BROWSERSTACK_KEY || "XMtyqvX8nZxNvqjCs1PK";
+config.user = process.env.BROWSERSTACK_USER
+config.key = process.env.BROWSERSTACK_KEY
 
 // Test specs
 config.specs = ["../tests/specs/android/delete-note-screen*.js"];
